@@ -1,13 +1,13 @@
 // src/AudioSentenceCheck.js
 import React, { useState } from 'react';
 import './AudioSentenceCheck.css';
-// import audio from './test.mp3';
+// import audio from '../../public/word.mp3';
 
 const AudioSentenceCheck = () => {
-  const correctSentence = "The quick brown fox jumps over the lazy dog";
+  const correctSentence = "Extinction";
   const [userInput, setUserInput] = useState('');
   const [feedback, setFeedback] = useState('');
-  const [audio] = useState(new Audio('https://res.cloudinary.com/dbrm2omel/video/upload/v1719075899/test_quj4ol.mp3'));
+  const [audio] = useState(new Audio('https://res.cloudinary.com/dbrm2omel/video/upload/v1719082728/word_osbbht.mp3'));
 
   const handleSubmit = () => {
     const trimmedInput = userInput.trim().toLowerCase();
@@ -38,7 +38,7 @@ const AudioSentenceCheck = () => {
         type="text"
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
-        placeholder="Type the sentence you hear"
+        placeholder="Type the Word you hear"
         autoFocus
       />
       <button onClick={handleSubmit}>Submit</button>
